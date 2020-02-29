@@ -1,0 +1,18 @@
+{
+  "name": "blog-application",
+  "version": "1.0.0",
+  "description": "A simple expressJS blogging app using Semantic UI for styling",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon src/app.js"
+  },
+  "author": "Nathan Dennis",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.2"
+  }
+}
