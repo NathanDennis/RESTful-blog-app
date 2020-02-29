@@ -15,7 +15,7 @@
                     <div class="content">
                         <a class="header" href='/posts/<%=post._id%>'><%= post.title %></h2>
                             <div class="meta">
-                                <span><%= post.createdAt %></span>
+                                <span><%= post.createdAt.toDateString() %></span>
                             </div>
 
                             <div class="description">
