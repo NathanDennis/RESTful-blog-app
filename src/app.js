@@ -25,7 +25,23 @@ const Blog = mongoose.model('Blog', blogSchema)
 
 // ROUTES
 app.get('/', (req, res) => {
-    res.render('home')
+    res.redirect('/posts')
+})
+
+//  index route
+app.get('/posts', (req, res) => {
+    Blog.find({}, (error, posts) => {
+        if (error) {
+            res.status(400).send('404 - Post not found')
+        }
+
+        res.render('index', {posts})
+    })
+})
+
+// create route
+app.get('/posts/new', (req, res) => {
+    res.render('new')
 })
 
 app.listen(PORT, () => {
